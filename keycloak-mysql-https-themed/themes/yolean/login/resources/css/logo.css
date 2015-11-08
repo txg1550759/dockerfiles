@@ -1,6 +1,6 @@
 
 .login-pf body {
-	background: #080808 url("../img/bg-login.jpg") repeat-x scroll 50% 0px;
+	background: #080808 url("../lib/patternfly/img/bg-login.jpg") repeat-x scroll 50% 0px;
 }
 
 #kc-logo {
