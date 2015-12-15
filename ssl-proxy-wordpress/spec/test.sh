@@ -11,6 +11,7 @@ docker run --rm -v $TESTSECRETS/:/certs ehazlett/certm -d /certs server generate
 openssl dhparam -out $TESTSECRETS/dhparam.pem 64
 
 docker run \
+  --name test-wp-ssl \
   --link test-wp:wpfrontend \
   -e ENABLE_SSL=true \
   -e TARGET_SERVICE=wpfrontend \
@@ -20,9 +21,8 @@ docker run \
   -p 30080:80 \
   -p 30443:443 \
   -d \
-  gcr.io/cloud-solutions-images/nginx-ssl-proxy:master-cc00da0 \
+  solsson/ssl-proxy-wordpress \
   /bin/bash /usr/bin/start.sh
-#  solsson/ssl-proxy-wordpress
 
 # TODOs
 # testbeat image
