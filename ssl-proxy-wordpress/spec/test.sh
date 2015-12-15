@@ -19,7 +19,9 @@ docker run \
   -v $TESTSECRETS/dhparam.pem:/etc/secrets/dhparam \
   -p 30080:80 \
   -p 30443:443 \
-  gcr.io/cloud-solutions-images/nginx-ssl-proxy:master-cc00da0
+  -d \
+  gcr.io/cloud-solutions-images/nginx-ssl-proxy:master-cc00da0 \
+  /bin/bash /usr/bin/start.sh
 #  solsson/ssl-proxy-wordpress
 
 # TODOs
