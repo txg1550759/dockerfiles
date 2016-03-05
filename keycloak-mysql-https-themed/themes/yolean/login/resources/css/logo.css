@@ -1,14 +1,15 @@
 
 .login-pf body {
-	background: #080808 url("../lib/patternfly/img/bg-login.jpg") repeat-x scroll 50% 0px;
-}
-
-#kc-logo {
-    background-color: white;
+  background-image: none;
+  background-color: white;
 }
 
 #kc-logo-wrapper {
     background: url("../img/yolean-logo.png") no-repeat top right;
     height: 45px;
     background-size: contain;
+}
+
+#kc-container-wrapper {
+  background-color: #4c88b1;
 }
