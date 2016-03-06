@@ -13,3 +13,15 @@
 #kc-container-wrapper {
   background-color: #4c88b1;
 }
+
+#kc-container-wrapper #kc-content {
+  background-color: #5fa9dd;
+}
+
+#kc-container-wrapper a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#kc-container-wrapper a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
