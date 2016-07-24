@@ -1,0 +1,27 @@
+
+.login-pf body {
+  background-image: none;
+  background-color: white;
+}
+
+#kc-logo-wrapper {
+    background: url("../img/yolean-logo.png") no-repeat top right;
+    height: 45px;
+    background-size: contain;
+}
+
+#kc-container-wrapper {
+  background-color: #4c88b1;
+}
+
+#kc-container-wrapper #kc-content {
+  background-color: #5fa9dd;
+}
+
+#kc-container-wrapper a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#kc-container-wrapper a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
