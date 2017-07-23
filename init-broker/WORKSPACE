@@ -52,3 +52,9 @@ go_repository(
   importpath = "github.com/google/gofuzz",
   commit = "24818f796faf91cd76ec7bddd72458fbced7a6c1"
 )
+
+go_repository(
+  name = "com_github_gogo_protobuf",
+  importpath = "github.com/gogo/protobuf",
+  commit = "7b6c6391c4ff245962047fc1e2c6e08b1cdfa0e8"
+)
