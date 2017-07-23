@@ -1,0 +1,32 @@
+git_repository(
+  name = "io_bazel_rules_go",
+  remote = "https://github.com/bazelbuild/rules_go.git",
+  tag = "0.5.2",
+)
+
+load(
+  "@io_bazel_rules_go//go:def.bzl",
+  "go_repositories",
+  "go_repository",
+)
+
+go_repositories()
+
+go_repository(
+  name = "com_github_golang_glog",
+  importpath = "github.com/golang/glog",
+  commit = "23def4e6c14b4da8ac2ed8007337bc5eb5007998",
+)
+
+go_repository(
+  name = "io_k8s_apimachinery",
+  importpath = "k8s.io/apimachinery",
+  # based on git url from go get -v k8s.io/apimachinery/pkg/api/errors
+  commit = "6134cb2da6d90597b0434e349f90f94fafc9ae51"
+)
+
+go_repository(
+  name = "io_k8s_client-go",
+  importpath = "k8s.io/client-go",
+  tag = "v3.0.0"
+)
