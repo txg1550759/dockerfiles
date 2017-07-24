@@ -22,7 +22,7 @@ go_repository(
   name = "io_k8s_apimachinery",
   importpath = "k8s.io/apimachinery",
   # based on git url from go get -v k8s.io/apimachinery/pkg/api/errors
-  commit = "6134cb2da6d90597b0434e349f90f94fafc9ae51"
+  commit = "abe34e4f5b4413c282a83011892cbeea5b32223b"
 )
 
 go_repository(
