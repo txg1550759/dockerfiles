@@ -16,5 +16,7 @@ RUN set -ex; \
 # Build as separate step for now, to speed up development
 COPY . /app
 
-RUN set -ex; cd /app; \
-  bazel build :in-cluster-client-configuration
+RUN bazel version
+
+#RUN set -ex; cd /app; \
+#  bazel build :in-cluster-client-configuration

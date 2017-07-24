@@ -58,3 +58,10 @@ go_repository(
   importpath = "github.com/gogo/protobuf",
   commit = "7b6c6391c4ff245962047fc1e2c6e08b1cdfa0e8"
 )
+
+# or https://github.com/tnarg/rules_go_swagger ?
+go_repository(
+  name = "com_github_go_openapi_spec",
+  commit = "e51c28f07047ad90caff03f6450908720d337e0c",
+  importpath = "github.com/go-openapi/spec",
+)
