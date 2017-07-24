@@ -68,3 +68,15 @@ git_repository(
 load("@com_github_tnarg_rules_go_swagger//go/swagger:def.bzl", "go_swagger_deps", "go_swagger_repositories", "go_swagger_repository")
 go_swagger_deps()
 go_swagger_repositories()
+
+go_repository(
+    name = "com_github_juju_ratelimit",
+    commit = "acf38b000a03e4ab89e40f20f1e548f4e6ac7f72",
+    importpath = "github.com/juju/ratelimit",
+)
+
+go_repository(
+        name = "com_github_davecgh_go_spew",
+        commit = "346938d642f2ec3594ed81d874461961cd0faa76",
+        importpath = "github.com/davecgh/go-spew",
+)
