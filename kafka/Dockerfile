@@ -29,7 +29,10 @@ RUN set -ex; \
   sed -i 's|base_dir=$(dirname $0)|base_dir=/opt/kafka/bin|' /usr/local/bin/*; \
   \
   mv -v ./config /etc/kafka; \
-  ln -sv /etc/kafka ./config;
+  ln -sv /etc/kafka ./config; \
+  \
+  grep 'Dlog4j.configuration' /usr/local/bin/* /opt/kafka/bin/kafka-run-class.sh;
+
 
 COPY docker-help.sh /usr/local/bin/docker-help
 ENTRYPOINT ["docker-help"]
