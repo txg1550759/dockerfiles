@@ -28,8 +28,8 @@ RUN set -ex; \
   sed -i 's|exec $(dirname $0)/kafka-run-class.sh |exec /opt/kafka/bin/kafka-run-class.sh |' /usr/local/bin/*; \
   sed -i 's|base_dir=$(dirname $0)|base_dir=/opt/kafka/bin|' /usr/local/bin/*; \
   \
-  echo "TODO how do we handle log4j.properties"; \
-  grep 'Dlog4j.configuration' /usr/local/bin/* /opt/kafka/bin/kafka-run-class.sh
+  mv -v ./config /etc/kafka; \
+  ln -sv /etc/kafka ./config;
 
 COPY docker-help.sh /usr/local/bin/docker-help
 ENTRYPOINT ["docker-help"]
