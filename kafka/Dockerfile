@@ -23,11 +23,13 @@ WORKDIR /opt/kafka
 
 RUN set -ex; \
   \
-  bash -ec 'for F in /opt/kafka/bin/*.sh; do ln -sv $F /usr/local/bin/${F:15:-3}; done;' \
+  bash -ec 'for F in /opt/kafka/bin/*.sh; do cp -v $F /usr/local/bin/${F:15:-3}; done;' \
   rm /usr/local/bin/kafka-run-class; \
   sed -i 's|exec $(dirname $0)/kafka-run-class.sh |exec /opt/kafka/bin/kafka-run-class.sh |' /usr/local/bin/*; \
+  sed -i 's|base_dir=$(dirname $0)|base_dir=/opt/kafka/bin|' /usr/local/bin/*; \
   \
-  echo "TODO how do we handle log4j.properties"
+  echo "TODO how do we handle log4j.properties"; \
+  grep 'Dlog4j.configuration' /usr/local/bin/* /opt/kafka/bin/kafka-run-class.sh
 
 COPY docker-help.sh /usr/local/bin/docker-help
 ENTRYPOINT ["docker-help"]
