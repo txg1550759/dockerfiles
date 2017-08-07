@@ -1,5 +1,5 @@
 # Select digest to have the same FROM as kafka-jre
-FROM solsson/kafkacat@sha256:1266d140c52cb39bf314b6f22b6d7a01c4c9084781bc779fdfade51214a713a8
+FROM solsson/kafkacat@sha256:3abea45158d605293c51b9a9d51652a23b2b530b9f00330a8927884e266add39
 
 ENV KUBERNETES_VERSION=1.7.2
 
