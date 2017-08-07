@@ -1,5 +1,5 @@
 # same FROM as kafka-jre, to keep pull times down and to provide the same shell distro+version
-FROM debian:stable-20170620
+FROM debian:stable-20170723
 
 ENV KUBERNETES_VERSION=1.7.2 KUBERNETES_CLIENTS_SHA256=9c2363710d61a12a28df2d8a4688543b785156369973d33144ab1f2c1d5c7b53
 
